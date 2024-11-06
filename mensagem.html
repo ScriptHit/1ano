@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns...</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+        .page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 0;
+        }
+        .page.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        .text {
+            font-size: 4vw;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        #final {
+            font-size: 3vw;
+            line-height: 1.5;
+        }
+        #nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            font-size: 18px;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 30px;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            background: rgba(255, 255, 255, 0.6);
+        }
+        @media (max-width: 600px) {
+            .text {
+                font-size: 6vw;
+            }
+            #final {
+                font-size: 4vw;
+            }
+            button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+        .album-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .album-button:hover {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .album-button:active {
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div id="intro" class="page active" style="background-color: #000;">
+        <div class="text">❤💌🎈🎂🥳</div>
+    </div>
+
+    <div id="page1" class="page" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">Uma terra...</div>
+    </div>
+    
+    <div id="page2" class="page" style="background-image: url('https://images.unsplash.com/photo-1439405326854-014607f694d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">7 mares...</div>
+    </div>
+    
+    <div id="page3" class="page" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">7 continentes...</div>
+    </div>
+    
+    <div id="page4" class="page" style="background-image: url('https://images.unsplash.com/photo-1512076249812-fd58fb2c8748?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="text">196 países...</div>
+    </div>
+    
+    <div id="page5" class="page" style="background-image: url('https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="text">8 bilhões de pessoas...</div>
+    </div>
+    
+    <div id="page6" class="page" style="background-image: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div id="final1" class="text">E de alguma forma...</div>
+    </div>
+
+    <div id="page7" class="page" style="background-image: url('IMG_0531.jpg');">
+        <div id="final2" class="text">Eu tive a sorte de te conhecer!</div>
+    </div>
+
+    <div id="page8" class="page" style="background-image: url('fotoo.jpg');">
+        <div id="final3" class="text">EU TE AMO LIVIA!</div>
+    </div>
+
+    <div id="page9" class="page" style="background-image: url('https://images.unsplash.com/photo-1531442145355-6e0d6609ad2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">TE QUERO PRO RESTO DA MINHA VIDA!</div>
+    </div>
+	
+    <div id="page10" class="page" style="background-image: url('IMG_7543.jpg');">
+        <div class="text">Você é, e sempre será minha pulguinha!</div>
+    </div>	
+
+    <div id="page11" class="page" style="background-image: url('https://images.unsplash.com/photo-1512070703454-7b31e4a072b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">Te amarei pra sempre, meu amor!</div>
+    </div>
+	
+    <div id="page12" class="page" style="background-image: url('https://images.unsplash.com/photo-1512070703454-7b31e4a072b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="text">Vou te amar até depois do meu coração parar, pois minha alma já está conectada na sua!</div>
+    </div>	
+	
+    <div id="page13" class="page" style="background-image: url('mosaico.jpg');">
+        <div class="text">TE VENERO, FELIZ ANIVERSARIOOOOOOO</div>
+    </div>	
+
+    <div id="nav">
+        <button onclick="prevPage()">Anterior</button>
+        <button onclick="nextPage()">Próxima</button>
+    </div>
+
+    <audio id="backgroundMusic" src="djavan.mp3"></audio>
+
+    <script>
+        let currentPage = 0; // Start with the intro page
+        const totalPages = 14; // Updated total pages
+
+        function showPage(pageNum) {
+            for (let i = 0; i <= totalPages; i++) {
+                const page = document.getElementById(`page${i}`) || document.getElementById('intro');
+                if (i === pageNum) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+                if (currentPage === 1) { // Start music on first actual page
+                    document.getElementById('backgroundMusic').play();
+                }
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                nextPage();
+            } else if (event.key === 'ArrowLeft') {
+                prevPage();
+            }
+        });
+
+        // Optional: Start with an auto slideshow
+        let autoSlide = setInterval(nextPage, 5000); // Change slides every 5 seconds
+
+        // Optional: Stop the slideshow on user interaction
+        document.addEventListener('click', function() {
+            clearInterval(autoSlide);
+        });
+    </script>
+</body>
+</html>
